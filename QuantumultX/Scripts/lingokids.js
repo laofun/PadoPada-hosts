@@ -8,9 +8,11 @@ QuantumultX:
 [mitm]
 hostname = api.lingokids.com
 */
-var obj = JSON.parse($response.body);
+let body = $response.body;
 
-obj["info"]["subscriptions"] = [
+let obj = JSON.parse(body)["info"];
+
+obj["subscriptions"] = [
   {
     "status": "active",
     "product": "unlimited",
@@ -25,7 +27,7 @@ obj["info"]["subscriptions"] = [
     "state": "active"
   }
 ];
-obj["info"]["customer"] = true;
+obj["customer"] = true;
 
 console.log(obj);
 
