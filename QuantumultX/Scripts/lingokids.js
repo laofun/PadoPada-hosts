@@ -1,6 +1,15 @@
+/*
+Lingokids Unlock membership	
+***************************
+QuantumultX:
+[rewrite_local]
+^https:\/\/api\.lingokids\.com\/v1\/renovate_session url script-response-body https://raw.githubusercontent.com/laofun/PadoPada-hosts/main/QuantumultX/Scripts/lingokids.js
+
+[mitm]
+hostname = api.lingokids.com
+*/
 var obj = JSON.parse($response.body);
 
-obj["info"]["customer"] = true;
 obj["info"]["subscriptions"] = [
   {
     "status": "active",
@@ -16,6 +25,7 @@ obj["info"]["subscriptions"] = [
     "state": "active"
   }
 ];
+obj["info"]["customer"] = true;
 
 console.log(obj);
 
