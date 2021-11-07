@@ -29,6 +29,8 @@ obj["subscriptions"] = [
 ];
 obj["customer"] = true;
 
-console.log(obj);
+body = JSON.stringify(obj);
 
-$done({ body: JSON.stringify(obj) });
+console.log(body);
+
+$done(body);
