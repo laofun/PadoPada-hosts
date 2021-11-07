@@ -17,5 +17,6 @@ obj["info"]["subscriptions"] = [
   },  
 ];
 
+console.log(obj);
 
 $done({ body: JSON.stringify(obj) });
