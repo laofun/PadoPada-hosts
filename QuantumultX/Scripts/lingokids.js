@@ -14,7 +14,7 @@ obj["info"]["subscriptions"] = [
     "auto_renew_status": true,
     "plan_id": "lk.ios.s1m.t1m.p15.v1",
     "state": "active"
-  },  
+  }
 ];
 
 console.log(obj);
